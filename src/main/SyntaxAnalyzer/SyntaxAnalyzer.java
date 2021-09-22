@@ -1,17 +1,13 @@
-package SyntaxAnalyzer;
+package main.SyntaxAnalyzer;
 
-import terms.FuncSymbWithArgs;
-import terms.IndConstant;
-import terms.IndVariabe;
-import terms.Term;
-import utils.ParsingUtils;
+import main.terms.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 /**
- * Класс <code>SyntaxAnalyzer</code> реализует синтаксический анализ {@link Term термов} в строковом представлении. <br><br>
+ * Класс <code>main.SyntaxAnalyzer.main.SyntaxAnalyzer</code> реализует синтаксический анализ {@link Term термов} в строковом представлении. <br><br>
  *
  * Создаёт экземпляры {@linkplain Term термов} из {@link String входной последовательности символов}.
  */

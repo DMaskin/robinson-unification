@@ -1,9 +1,5 @@
-package TermFactories;
+package main.terms;
 
-import terms.FuncSymbWithArgs;
-import terms.IndConstant;
-import terms.IndVariabe;
-import terms.Term;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package terms;
+package main.terms;
 
 /**
  * Класс <code>TermVariablePair</code> реализует пару:

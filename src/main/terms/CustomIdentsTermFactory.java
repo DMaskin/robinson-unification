@@ -1,16 +1,11 @@
-package TermFactories;
-
-import terms.FuncSymbWithArgs;
-import terms.IndConstant;
-import terms.IndVariabe;
-import terms.Term;
+package main.terms;
 
 import java.util.List;
 
 /**
- * Класс <code>CustomIdentsTermFactory</code> реализует фабрику создания <code>TermFactory</code>. <br>
- * Класс <code>CustomIdentsTermFactory</code> реализует методы создания {@link Term термов} без использования
- * {@link SyntaxAnalyzer.SyntaxAnalyzer синтаксического анализа}.
+ * Класс <code>main.terms.CustomIdentsTermFactory</code> реализует фабрику создания <code>main.terms.TermFactory</code>. <br>
+ * Класс <code>main.terms.CustomIdentsTermFactory</code> реализует методы создания {@link Term термов} без использования
+ * {@link main.SyntaxAnalyzer синтаксического анализа}.
  */
 public class CustomIdentsTermFactory implements TermFactory {
     /**

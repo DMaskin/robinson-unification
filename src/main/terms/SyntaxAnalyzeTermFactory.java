@@ -1,19 +1,18 @@
-package TermFactories;
+package main.terms;
 
-import terms.FuncSymbWithArgs;
-import terms.IndConstant;
-import terms.IndVariabe;
-import terms.Term;
-import utils.ParsingUtils;
+import main.SyntaxAnalyzer.ParsingUtils;
 
 import java.util.List;
 
+import static main.SyntaxAnalyzer.ParsingUtils.*;
+
 /**
- * Класс <code>SyntaxAnalyzeTermFactory</code> реализует фабрику создания <code>TermFactory</code>. <br>
- * Класс <code>SyntaxAnalyzeTermFactory</code> реализует методы создания {@link Term термов} с использованием
- * {@link SyntaxAnalyzer.SyntaxAnalyzer синтаксического анализа}.
+ * Класс <code>main.terms.SyntaxAnalyzeTermFactory</code> реализует фабрику создания <code>main.terms.TermFactory</code>. <br>
+ * Класс <code>main.terms.SyntaxAnalyzeTermFactory</code> реализует методы создания {@link Term термов} с использованием
+ * {синтакс анализа}.
  */
 public class SyntaxAnalyzeTermFactory implements TermFactory {
+
     /**
      * Возвращает индивидную переменную с идентификатором <code>name</code>
      * @param name идентификатор
@@ -24,7 +23,7 @@ public class SyntaxAnalyzeTermFactory implements TermFactory {
     public IndVariabe createIndVariable(String name) {
         IndVariabe term = null;
 
-        if (ParsingUtils.defineTermPattern(name) == ParsingUtils.TermPattern.INDIVIDUAL_VARIABLE) {
+        if (defineTermPattern(name) == TermPattern.INDIVIDUAL_VARIABLE) {
             term = new IndVariabe(name);
         }
 
@@ -45,7 +44,7 @@ public class SyntaxAnalyzeTermFactory implements TermFactory {
     public IndConstant createIndConstant(String name) {
         IndConstant term = null;
 
-        if (ParsingUtils.defineTermPattern(name) == ParsingUtils.TermPattern.INDIVIDUAL_CONSTANT) {
+        if (ParsingUtils.defineTermPattern(name) == ParsingUtils.TermPattern.FUNCTION_SYMBOL_WITH_ARGS) {
             term = new IndConstant(name);
         }
 
@@ -91,7 +90,7 @@ public class SyntaxAnalyzeTermFactory implements TermFactory {
     public FuncSymbWithArgs createFSymb(String name, Term arg) {
         FuncSymbWithArgs term = null;
 
-        if (ParsingUtils.defineTermPattern(name) == ParsingUtils.TermPattern.FUNCTION_SYMBOL_WITH_ARGS) {
+        if (defineTermPattern(name) == TermPattern.FUNCTION_SYMBOL_WITH_ARGS) {
             term = new FuncSymbWithArgs(name, arg);
         }
 

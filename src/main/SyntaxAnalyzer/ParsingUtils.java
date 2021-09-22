@@ -1,15 +1,15 @@
-package utils;
+package main.SyntaxAnalyzer;
 
-import terms.FuncSymbWithArgs;
-import terms.IndConstant;
-import terms.IndVariabe;
+import main.terms.FuncSymbWithArgs;
+import main.terms.IndConstant;
+import main.terms.IndVariabe;
 
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * Класс <code>ParsingUtils</code> реализует утилиты {@link SyntaxAnalyzer.SyntaxAnalyzer синтаксического анализа}
- * и хранит константы-идентификаторы {@link terms.Term термов}
+ * Класс <code>main.SyntaxAnalyzer.ParsingUtils</code> реализует утилиты { синтаксического анализа}
+ * и хранит константы-идентификаторы {@link main.terms.Term термов}
  */
 public class ParsingUtils {
     /**

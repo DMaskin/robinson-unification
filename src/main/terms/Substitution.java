@@ -1,7 +1,8 @@
-package terms;
+package main.terms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -97,7 +98,7 @@ public class Substitution {
     public Substitution compose(Substitution tau) {
         tau.getValue().forEach(e -> this.getValue().add(e));
 
-        List<TermVariablePair> delta = new ArrayList<TermVariablePair>();
+        List<TermVariablePair> delta = new ArrayList<>();
 
         for (int i = 0; i < this.getValue().size(); i++) {
             Term sigmaTerm = this.getValue().get(i).getTerm();
@@ -110,5 +111,21 @@ public class Substitution {
         }
 
         return new Substitution(delta);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder str = new StringBuilder("{ ");
+        Iterator<TermVariablePair> termVariablePairIterator = this.getValue().iterator();
+        while (termVariablePairIterator.hasNext()) {
+            str.append(termVariablePairIterator.next().toString());
+
+            if (termVariablePairIterator.hasNext()) {
+                str.append(", ");
+            }
+        }
+
+        str.append(" }");
+        return str.toString();
     }
 }

@@ -1,4 +1,4 @@
-package terms;
+package main.terms;
 
 import java.util.ArrayList;
 import java.util.Arrays;

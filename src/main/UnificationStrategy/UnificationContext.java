@@ -1,10 +1,10 @@
-package UnificationStrategy;
+package main.UnificationStrategy;
 
-import terms.Substitution;
-import terms.TermPair;
+import main.terms.Substitution;
+import main.terms.Term;
 
 /**
- * Класс <code>UnificationContext</code> реализует контекст унификации в соотвествии с паттерном
+ * Класс <code>main.UnificationStrategy.main.UnificationStrategy.UnificationContext</code> реализует контекст унификации в соотвествии с паттерном
  * <code>{@linkplain UnificationStrategy Strategy}</code>
  */
 public class UnificationContext {
@@ -27,11 +27,11 @@ public class UnificationContext {
     }
 
     /**
-     * Возвращает наиболее общий унификатор {@link TermPair пары термов}
-     * @param termPair пара термов
+     * Возвращает наиболее общий унификатор {пары термов}
+     * @param
      * @return {@link Substitution наиболее общий унификатор пары термов}
      */
-    public Substitution executeStrategy(TermPair termPair) {
-        return strategy.unify(termPair);
+    public Substitution executeStrategy(Term s, Term t) {
+        return strategy.unify(s, t);
     }
 }
